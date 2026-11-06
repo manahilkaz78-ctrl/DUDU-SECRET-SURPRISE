@@ -1,0 +1,2696 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My DUDU ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --wine:#541c32;
+ --deep:#210f1b;
+ --rose:#c98799;
+ --pink:#e8bdc9;
+ --gold:#d6b477;
+ --cream:#fff4e9;
+ --muted:#cbb3b9;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+ background:var(--deep);
+ color:var(--cream);
+ font-family:'Poppins',sans-serif;
+ min-height:100vh;
+ overflow-x:hidden;
+}
+
+button{font-family:inherit;cursor:pointer}
+
+body:before{
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:-1;
+ background:
+ radial-gradient(circle at 15% 15%,#74344a44,transparent 35%),
+ radial-gradient(circle at 85% 75%,#9d526044,transparent 35%),
+ linear-gradient(135deg,#170c15,#321625 55%,#1b0d19);
+}
+
+.stars-bg{
+ position:fixed;inset:0;pointer-events:none;z-index:-1;
+ background-image:radial-gradient(#f5d9dc88 1px,transparent 1px);
+ background-size:55px 55px;opacity:.25;
+}
+
+.hidden{display:none!important}
+
+#login{
+ min-height:100vh;display:flex;align-items:center;
+ justify-content:center;padding:25px;text-align:center;
+}
+
+.login-card{
+ width:min(440px,100%);
+ padding:48px 30px;
+ border:1px solid #d6b47766;
+ background:#2b1422cc;
+ border-radius:5px;
+ box-shadow:0 20px 80px #0008;
+}
+
+.eyebrow{
+ color:var(--gold);letter-spacing:5px;
+ text-transform:uppercase;font-size:10px;
+}
+
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
+
+.login-card h1{
+ font-size:clamp(38px,8vw,58px);
+ color:var(--pink);margin:22px 0 10px;
+}
+
+.subtitle{color:var(--muted);font-size:13px;line-height:1.9}
+
+input,textarea{
+ width:100%;background:#180d16;color:var(--cream);
+ border:1px solid #d6b47766;padding:14px;
+ outline:none;border-radius:2px;font:inherit;
+}
+
+input:focus,textarea:focus{border-color:var(--gold)}
+
+.login-card input{margin:25px 0 14px;text-align:center;letter-spacing:5px}
+
+.main-btn{
+ background:linear-gradient(135deg,#d6b477,#f0d9a8);
+ color:#321626;border:0;padding:14px 27px;
+ font-size:11px;letter-spacing:2px;text-transform:uppercase;
+ transition:.3s;
+}
+
+.main-btn:hover{transform:translateY(-3px);box-shadow:0 8px 25px #d6b47744}
+
+.error{color:#ff9eae;font-size:12px;margin-top:12px}
+
+#app{display:none}
+
+header{
+ padding:25px 6%;display:flex;justify-content:space-between;
+ align-items:center;border-bottom:1px solid #d6b47733;
+}
+
+.logo{font-family:'Playfair Display';font-size:22px;color:var(--pink)}
+.logo span{color:var(--gold)}
+
+.header-note{font-size:10px;letter-spacing:2px;color:var(--muted)}
+
+.hero{text-align:center;padding:75px 20px 45px}
+
+.hero h1{
+ color:var(--pink);font-size:clamp(42px,8vw,76px);
+ margin:18px 0;
+}
+
+.hero p{font-family:'Cormorant Garamond';font-size:23px;color:var(--muted)}
+
+.heart{color:var(--rose);font-size:25px;animation:pulse 1.8s infinite}
+
+@keyframes pulse{50%{transform:scale(1.2)}}
+
+.section-title{text-align:center;margin:25px auto 35px;padding:0 15px}
+.section-title h2{font-size:35px;color:var(--pink);margin-bottom:10px}
+.section-title p{font-size:12px;color:var(--muted)}
+
+.grid{
+ width:min(1050px,90%);margin:0 auto 80px;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:18px;
+}
+
+.feature{
+ min-height:205px;padding:28px 22px;
+ background:linear-gradient(145deg,#50283a99,#261321);
+ border:1px solid #d6b47744;
+ text-align:center;position:relative;overflow:hidden;
+ transition:.35s;cursor:pointer;
+}
+
+.feature:hover{
+ transform:translateY(-7px);border-color:var(--gold);
+ box-shadow:0 15px 40px #0005;
+}
+
+.feature .emoji{font-size:35px;margin-bottom:16px}
+.feature h3{font-size:22px;color:var(--pink);margin-bottom:10px}
+.feature p{font-size:11px;line-height:1.8;color:var(--muted)}
+
+.feature:after{
+ content:"";position:absolute;bottom:0;left:0;width:100%;
+ height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+.page{
+ width:min(850px,91%);margin:35px auto 80px;
+ padding:35px 25px;background:#321b29;
+ border:1px solid #d6b47755;
+ box-shadow:0 15px 55px #0005;
+}
+
+.back{
+ background:none;border:0;color:var(--gold);
+ font-size:12px;letter-spacing:2px;margin-bottom:30px;
+}
+
+.page h2{text-align:center;color:var(--pink);font-size:36px;margin-bottom:12px}
+.page-intro{text-align:center;color:var(--muted);font-size:12px;margin-bottom:30px;line-height:1.8}
+
+.letter-grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px
+}
+
+.letter-card{
+ padding:20px 12px;text-align:center;
+ background:#24131e;border:1px solid #d6b47744;
+ cursor:pointer;transition:.25s;
+}
+
+.letter-card:hover{border-color:var(--gold);transform:scale(1.02)}
+.letter-card .emoji{font-size:25px}
+.letter-card h3{font-size:17px;color:var(--pink);margin:10px 0}
+.letter-card small{color:var(--gold);font-size:9px;letter-spacing:2px}
+
+.letter-content{
+ padding:30px;background:#25131f;border:1px solid #d6b47766;
+ margin-top:22px;line-height:2;font-family:'Cormorant Garamond';
+ font-size:21px;color:#f5dfe0;white-space:pre-line;
+}
+
+.sound-item,.clue-box,.quiz-box{
+ background:#25131f;border:1px solid #d6b47755;
+ padding:22px;margin:15px 0;
+}
+
+.sound-item h3{color:var(--pink);margin-bottom:10px}
+.sound-item input{margin:10px 0}
+
+.star-grid{
+ display:grid;grid-template-columns:repeat(5,1fr);
+ gap:15px;margin:30px 0;
+}
+
+.star{
+ background:none;border:0;color:var(--gold);
+ font-size:38px;transition:.3s;
+}
+.star:hover{transform:scale(1.35);color:#fff1b8}
+
+.message-box{
+ text-align:center;padding:25px;margin-top:20px;
+ border:1px solid #d6b47766;background:#24131e;
+ color:var(--pink);font-family:'Cormorant Garamond';
+ font-size:23px;line-height:1.7;min-height:100px;
+}
+
+.clue-box h3{color:var(--gold);margin-bottom:12px}
+.clue-box p{font-size:13px;line-height:1.8;color:var(--muted)}
+.clue-box input{margin:15px 0}
+.feedback{font-size:12px;margin-top:10px;color:var(--gold)}
+
+textarea{min-height:180px;resize:vertical;line-height:1.8}
+
+.quiz-option{
+ display:block;width:100%;text-align:left;padding:13px;
+ margin:9px 0;background:#351d2b;border:1px solid #795064;
+ color:var(--cream);font-size:12px;
+}
+.quiz-option:hover{border-color:var(--gold);background:#512a3d}
+
+footer{
+ text-align:center;padding:35px 15px;
+ border-top:1px solid #d6b47733;color:var(--muted);
+ font-family:'Cormorant Garamond';font-size:20px;
+}
+
+@media(max-width:600px){
+ header{padding:18px 5%}
+ .header-note{font-size:8px}
+ .hero{padding:55px 15px 35px}
+ .page{padding:25px 17px}
+ .star-grid{grid-template-columns:repeat(5,1fr);gap:5px}
+ .star{font-size:30px}
+}
+
+/* ===== BUBU'S ROMANTIC DOODLE WORLD ===== */
+
+body:after{
+ content:"♡     ✧      ୨୧       ✿       ♡";
+ position:fixed;
+ top:12%;
+ left:0;
+ width:100%;
+ text-align:center;
+ word-spacing:55px;
+ font-size:19px;
+ color:#d89aa9;
+ opacity:.13;
+ pointer-events:none;
+ z-index:0;
+ animation:doodleFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes doodleFloat{
+ from{transform:translateY(-12px) rotate(-2deg)}
+ to{transform:translateY(18px) rotate(2deg)}
+}
+
+.tile{
+ overflow:hidden;
+ border-radius:5px;
+ transition:transform .4s ease,box-shadow .4s ease,border-color .4s ease;
+}
+
+.tile:before{
+ content:"✧";
+ position:absolute;
+ top:12px;
+ right:15px;
+ font-size:22px;
+ color:var(--gold);
+ opacity:.5;
+ transition:.4s;
+}
+
+.tile:hover:before{
+ transform:rotate(90deg) scale(1.5);
+ opacity:1;
+}
+
+.tile:hover{
+ transform:translateY(-9px) scale(1.015);
+ box-shadow:0 18px 45px #0008,0 0 18px #d9bd8322;
+ border-color:var(--gold);
+}
+
+.envelope{
+ position:relative;
+ overflow:hidden;
+ border-radius:4px;
+ transition:transform .35s ease,background .35s ease;
+}
+
+.envelope:hover{
+ transform:translateY(-6px) rotate(-1deg);
+ background:linear-gradient(145deg,#704157,#302039);
+}
+
+.envelope span{
+ transition:transform .4s ease;
+}
+
+.envelope:hover span{
+ display:block;
+ transform:scale(1.3) rotate(-8deg);
+}
+
+.star{
+ transition:transform .3s ease,color .3s ease,text-shadow .3s ease;
+ animation:starTwinkle 2.5s ease-in-out infinite alternate;
+}
+
+.star:hover{
+ transform:scale(1.35) rotate(15deg);
+ color:#fff0b5;
+ text-shadow:0 0 15px #f5d78c,0 0 30px #d9bd83;
+}
+
+@keyframes starTwinkle{
+ from{opacity:.65}
+ to{opacity:1}
+}
+
+.panel{
+ animation:panelReveal .65s ease both;
+}
+
+@keyframes panelReveal{
+ from{opacity:0;transform:translateY(18px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+.btn{
+ transition:all .3s ease;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 8px 25px #d9bd8344;
+}
+
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{
+  animation-duration:.01ms!important;
+  transition-duration:.01ms!important;
+ }
+}
+
+/* =========================================
+   BUBU × DUDU — PREMIUM LUXURY UI
+   Design adapted from Code 2 for Code 1
+========================================= */
+
+/* FLOATING DOODLES — PREMIUM DECORATION */
+
+.doodle-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.doodle {
+  position: absolute;
+  color: var(--champagne-gold);
+  opacity: .28;
+  font-size: 25px;
+  animation: floatDrift 20s infinite ease-in-out;
+}
+
+@keyframes floatDrift {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(18px,-22px) rotate(6deg); }
+  50% { transform: translate(-12px,14px) rotate(-4deg); }
+  75% { transform: translate(8px,-8px) rotate(3deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
+.deco-heart {
+  position: absolute;
+  font-size: 24px;
+  color: var(--champagne-gold);
+  opacity: .4;
+  pointer-events: none;
+  animation: floatDrift 12s infinite alternate ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doodle, .deco-heart {
+    display: none !important;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+  --deep-burgundy: #541C32;
+  --midnight-plum: #210F1B;
+  --dusty-rose: #C98799;
+  --soft-blush: #E8BDC9;
+  --champagne-gold: #D6B477;
+  --warm-ivory: #FFF4E9;
+  --muted-mauve: #CBB3B9;
+}
+
+/* MAIN BACKGROUND */
+html {
+  scroll-behavior: smooth;
+  background: var(--midnight-plum);
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(84,28,50,.65), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(201,135,153,.18), transparent 40%),
+    linear-gradient(145deg, #160A12, #2B1220 50%, #100910);
+  color: var(--warm-ivory);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* FLOATING DECORATIVE DOODLES */
+body::after {
+  content: "♡     ✧     ୨୧     ✿     ♡     ✧";
+  position: fixed;
+  inset: 12% 0 auto;
+  text-align: center;
+  word-spacing: 35px;
+  color: var(--champagne-gold);
+  opacity: .13;
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 0;
+  animation: bubuFloat 9s ease-in-out infinite alternate;
+}
+
+@keyframes bubuFloat {
+  from { transform: translateY(-12px) rotate(-2deg); }
+  to { transform: translateY(15px) rotate(2deg); }
+}
+
+/* LOGIN CARD */
+#login {
+  position: relative;
+  z-index: 2;
+}
+
+.login-card {
+  max-width: 520px;
+  border: 1px solid rgba(214,180,119,.55);
+  border-radius: 42px 12px 42px 12px;
+  padding: 52px 36px;
+  background: rgba(33,15,27,.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,244,233,.12);
+  transition: .4s ease;
+}
+
+.login-card:hover {
+  box-shadow: 0 30px 75px rgba(214,180,119,.17);
+}
+
+.login-card h1 {
+  color: var(--warm-ivory);
+  text-shadow: 0 4px 25px rgba(214,180,119,.25);
+  letter-spacing: 1px;
+}
+
+.eyebrow {
+  color: var(--champagne-gold);
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  color: var(--soft-blush);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* INPUT FIELDS */
+input, textarea {
+  background: rgba(255,244,233,.06);
+  color: var(--warm-ivory);
+  border: 1px solid rgba(214,180,119,.45);
+  border-radius: 30px;
+  transition: .3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--champagne-gold);
+  box-shadow: 0 0 0 4px rgba(214,180,119,.12);
+}
+
+/* GOLD BUTTONS */
+.main-btn {
+  background: linear-gradient(145deg, #E8CE9B, #C49B60 60%, #A77B45);
+  color: #211019;
+  border: 1px solid rgba(255,244,233,.35);
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 28px rgba(184,139,89,.28);
+  transition: .3s ease;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(214,180,119,.35);
+}
+
+/* HEADER */
+header {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(214,180,119,.3);
+}
+
+.logo {
+  color: var(--champagne-gold);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--soft-blush);
+}
+
+.header-note {
+  color: var(--muted-mauve);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: var(--warm-ivory);
+  text-shadow: 0 4px 30px rgba(214,180,119,.2);
+}
+
+.hero p {
+  color: var(--soft-blush);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.heart {
+  color: var(--champagne-gold);
+  filter: drop-shadow(0 0 10px rgba(214,180,119,.35));
+}
+
+/* SECTION HEADINGS */
+.section-title h2,
+.page h2 {
+  color: var(--champagne-gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.section-title p,
+.page-intro {
+  color: var(--soft-blush);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+}
+
+/* SIX SURPRISE CARDS */
+.feature {
+  background: linear-gradient(145deg, rgba(84,28,50,.72), rgba(33,15,27,.96));
+  border: 1px solid rgba(214,180,119,.4);
+  border-radius: 24px;
+  padding: 35px 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.3);
+  backdrop-filter: blur(8px);
+  transition: .35s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  border-color: var(--champagne-gold);
+  box-shadow: 0 20px 45px rgba(214,180,119,.15);
+}
+
+.feature .emoji {
+  filter: drop-shadow(0 5px 12px rgba(214,180,119,.3));
+}
+
+.feature h3 {
+  color: var(--warm-ivory);
+  font-family: 'Playfair Display', serif;
+}
+
+.feature p {
+  color: var(--muted-mauve);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+}
+
+/* INNER PAGES */
+.page {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(145deg, #321B29, #1D0E18);
+  border: 1px solid rgba(214,180,119,.5);
+  border-radius: 28px 8px 28px 8px;
+  box-shadow: 0 25px 65px rgba(0,0,0,.4);
+}
+
+/* BACK BUTTON */
+.back {
+  color: var(--champagne-gold);
+  transition: .3s ease;
+}
+
+.back:hover {
+  transform: translateX(-5px);
+  color: var(--soft-blush);
+}
+
+/* OPEN WHEN LETTERS */
+.letter-card {
+  background: #F9EDE3;
+  border: 1px solid rgba(84,28,50,.2);
+  border-radius: 12px 12px 24px 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  transition: .3s ease;
+}
+
+.letter-card h3 {
+  color: var(--deep-burgundy);
+  font-family: 'Playfair Display', serif;
+}
+
+.letter-card small {
+  color: #9B7047;
+}
+
+.letter-card:hover {
+  transform: translateY(-7px) scale(1.02);
+  border-color: var(--champagne-gold);
+  box-shadow: 0 15px 30px rgba(0,0,0,.35);
+}
+
+.letter-content {
+  background: #FCF6EF;
+  color: #2E1B22;
+  border: 1px solid rgba(214,180,119,.6);
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+}
+
+/* SOUND BOX */
+.sound-item {
+  background: #F9EDE3;
+  color: #2E1B22;
+  border-left: 5px solid var(--champagne-gold);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.sound-item h3 {
+  color: var(--deep-burgundy);
+}
+
+/* TREASURE HUNT */
+.clue-box {
+  background: rgba(255,244,233,.06);
+  border: 1px solid rgba(214,180,119,.4);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.clue-box h3 {
+  color: var(--champagne-gold);
+}
+
+.clue-box p {
+  color: var(--soft-blush);
+}
+
+/* STARS */
+.star {
+  color: var(--champagne-gold);
+  filter: drop-shadow(0 0 10px rgba(214,180,119,.5));
+  transition: .3s ease;
+}
+
+.star:hover {
+  transform: scale(1.35) rotate(10deg);
+  color: #FFF0B5;
+  filter: drop-shadow(0 0 20px rgba(214,180,119,.9));
+}
+
+.message-box {
+  background: rgba(255,244,233,.07);
+  border: 1px solid rgba(214,180,119,.5);
+  border-radius: 20px;
+  color: var(--warm-ivory);
+  font-family: 'Cormorant Garamond', serif;
+  backdrop-filter: blur(8px);
+}
+
+/* FUTURE LETTER & QUIZ */
+.quiz-box {
+  background: rgba(255,244,233,.05);
+  border: 1px solid rgba(214,180,119,.4);
+  border-radius: 20px;
+}
+
+.quiz-option {
+  border-radius: 12px;
+  border-color: rgba(214,180,119,.45);
+  transition: .25s ease;
+}
+
+.quiz-option:hover {
+  border-color: var(--champagne-gold);
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+  color: var(--muted-mauve);
+  border-color: rgba(214,180,119,.3);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 38px 22px;
+    border-radius: 30px 10px 30px 10px;
+  }
+
+  .feature {
+    border-radius: 18px;
+    padding: 28px 18px;
+  }
+
+  .page {
+    border-radius: 20px 6px 20px 6px;
+  }
+
+  .letter-content {
+    padding: 22px 18px;
+    font-size: 19px;
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* =========================================
+   BUBU × DUDU — PREMIUM LUXURY UI
+   Design adapted from Code 2 for Code 1
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+  --deep-burgundy: #541C32;
+  --midnight-plum: #210F1B;
+  --dusty-rose: #C98799;
+  --soft-blush: #E8BDC9;
+  --champagne-gold: #D6B477;
+  --warm-ivory: #FFF4E9;
+  --muted-mauve: #CBB3B9;
+}
+
+/* MAIN BACKGROUND */
+html {
+  scroll-behavior: smooth;
+  background: var(--midnight-plum);
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(84,28,50,.65), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(201,135,153,.18), transparent 40%),
+    linear-gradient(145deg, #160A12, #2B1220 50%, #100910);
+  color: var(--warm-ivory);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* FLOATING DECORATIVE DOODLES */
+body::after {
+  content: "♡     ✧     ୨୧     ✿     ♡     ✧";
+  position: fixed;
+  inset: 12% 0 auto;
+  text-align: center;
+  word-spacing: 35px;
+  color: var(--champagne-gold);
+  opacity: .13;
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 0;
+  animation: bubuFloat 9s ease-in-out infinite alternate;
+}
+
+@keyframes bubuFloat {
+  from { transform: translateY(-12px) rotate(-2deg); }
+  to { transform: translateY(15px) rotate(2deg); }
+}
+
+/* LOGIN CARD */
+#login {
+  position: relative;
+  z-index: 2;
+}
+
+.login-card {
+  max-width: 520px;
+  border: 1px solid rgba(214,180,119,.55);
+  border-radius: 42px 12px 42px 12px;
+  padding: 52px 36px;
+  background: rgba(33,15,27,.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,244,233,.12);
+  transition: .4s ease;
+}
+
+.login-card:hover {
+  box-shadow: 0 30px 75px rgba(214,180,119,.17);
+}
+
+.login-card h1 {
+  color: var(--warm-ivory);
+  text-shadow: 0 4px 25px rgba(214,180,119,.25);
+  letter-spacing: 1px;
+}
+
+.eyebrow {
+  color: var(--champagne-gold);
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  color: var(--soft-blush);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* INPUT FIELDS */
+input, textarea {
+  background: rgba(255,244,233,.06);
+  color: var(--warm-ivory);
+  border: 1px solid rgba(214,180,119,.45);
+  border-radius: 30px;
+  transition: .3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--champagne-gold);
+  box-shadow: 0 0 0 4px rgba(214,180,119,.12);
+}
+
+/* GOLD BUTTONS */
+.main-btn {
+  background: linear-gradient(145deg, #E8CE9B, #C49B60 60%, #A77B45);
+  color: #211019;
+  border: 1px solid rgba(255,244,233,.35);
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 28px rgba(184,139,89,.28);
+  transition: .3s ease;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(214,180,119,.35);
+}
+
+/* HEADER */
+header {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid rgba(214,180,119,.3);
+}
+
+.logo {
+  color: var(--champagne-gold);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--soft-blush);
+}
+
+.header-note {
+  color: var(--muted-mauve);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  color: var(--warm-ivory);
+  text-shadow: 0 4px 30px rgba(214,180,119,.2);
+}
+
+.hero p {
+  color: var(--soft-blush);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.heart {
+  color: var(--champagne-gold);
+  filter: drop-shadow(0 0 10px rgba(214,180,119,.35));
+}
+
+/* SECTION HEADINGS */
+.section-title h2,
+.page h2 {
+  color: var(--champagne-gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.section-title p,
+.page-intro {
+  color: var(--soft-blush);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+}
+
+/* SIX SURPRISE CARDS */
+.feature {
+  background: linear-gradient(145deg, rgba(84,28,50,.72), rgba(33,15,27,.96));
+  border: 1px solid rgba(214,180,119,.4);
+  border-radius: 24px;
+  padding: 35px 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.3);
+  backdrop-filter: blur(8px);
+  transition: .35s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  border-color: var(--champagne-gold);
+  box-shadow: 0 20px 45px rgba(214,180,119,.15);
+}
+
+.feature .emoji {
+  filter: drop-shadow(0 5px 12px rgba(214,180,119,.3));
+}
+
+.feature h3 {
+  color: var(--warm-ivory);
+  font-family: 'Playfair Display', serif;
+}
+
+.feature p {
+  color: var(--muted-mauve);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+}
+
+/* INNER PAGES */
+.page {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(145deg, #321B29, #1D0E18);
+  border: 1px solid rgba(214,180,119,.5);
+  border-radius: 28px 8px 28px 8px;
+  box-shadow: 0 25px 65px rgba(0,0,0,.4);
+}
+
+/* BACK BUTTON */
+.back {
+  color: var(--champagne-gold);
+  transition: .3s ease;
+}
+
+.back:hover {
+  transform: translateX(-5px);
+  color: var(--soft-blush);
+}
+
+/* OPEN WHEN LETTERS */
+.letter-card {
+  background: #F9EDE3;
+  border: 1px solid rgba(84,28,50,.2);
+  border-radius: 12px 12px 24px 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  transition: .3s ease;
+}
+
+.letter-card h3 {
+  color: var(--deep-burgundy);
+  font-family: 'Playfair Display', serif;
+}
+
+.letter-card small {
+  color: #9B7047;
+}
+
+.letter-card:hover {
+  transform: translateY(-7px) scale(1.02);
+  border-color: var(--champagne-gold);
+  box-shadow: 0 15px 30px rgba(0,0,0,.35);
+}
+
+.letter-content {
+  background: #FCF6EF;
+  color: #2E1B22;
+  border: 1px solid rgba(214,180,119,.6);
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.25);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+}
+
+/* SOUND BOX */
+.sound-item {
+  background: #F9EDE3;
+  color: #2E1B22;
+  border-left: 5px solid var(--champagne-gold);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+.sound-item h3 {
+  color: var(--deep-burgundy);
+}
+
+/* TREASURE HUNT */
+.clue-box {
+  background: rgba(255,244,233,.06);
+  border: 1px solid rgba(214,180,119,.4);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.clue-box h3 {
+  color: var(--champagne-gold);
+}
+
+.clue-box p {
+  color: var(--soft-blush);
+}
+
+/* STARS */
+.star {
+  color: var(--champagne-gold);
+  filter: drop-shadow(0 0 10px rgba(214,180,119,.5));
+  transition: .3s ease;
+}
+
+.star:hover {
+  transform: scale(1.35) rotate(10deg);
+  color: #FFF0B5;
+  filter: drop-shadow(0 0 20px rgba(214,180,119,.9));
+}
+
+.message-box {
+  background: rgba(255,244,233,.07);
+  border: 1px solid rgba(214,180,119,.5);
+  border-radius: 20px;
+  color: var(--warm-ivory);
+  font-family: 'Cormorant Garamond', serif;
+  backdrop-filter: blur(8px);
+}
+
+/* FUTURE LETTER & QUIZ */
+.quiz-box {
+  background: rgba(255,244,233,.05);
+  border: 1px solid rgba(214,180,119,.4);
+  border-radius: 20px;
+}
+
+.quiz-option {
+  border-radius: 12px;
+  border-color: rgba(214,180,119,.45);
+  transition: .25s ease;
+}
+
+.quiz-option:hover {
+  border-color: var(--champagne-gold);
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+  color: var(--muted-mauve);
+  border-color: rgba(214,180,119,.3);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 38px 22px;
+    border-radius: 30px 10px 30px 10px;
+  }
+
+  .feature {
+    border-radius: 18px;
+    padding: 28px 18px;
+  }
+
+  .page {
+    border-radius: 20px 6px 20px 6px;
+  }
+
+  .letter-content {
+    padding: 22px 18px;
+    font-size: 19px;
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* STEP 9 — PREMIUM ENVELOPE OPENING */
+
+.letter-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 185px;
+  padding: 32px 14px 22px;
+  background: linear-gradient(145deg, #fff8ef, #f2dfd8);
+  border: 1px solid rgba(214,180,119,.65);
+  border-radius: 12px 12px 22px 22px;
+  color: #321626;
+  box-shadow: 0 12px 25px rgba(0,0,0,.25);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.letter-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 48%;
+  background: linear-gradient(145deg, #e8bdc9, #d9a5b4);
+  clip-path: polygon(0 0, 100% 0, 50% 78%);
+  transform-origin: top center;
+  transition: transform .55s ease;
+  z-index: 1;
+}
+
+.letter-card::after {
+  content: "♥";
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff4e9;
+  background: #8b3f58;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  z-index: 2;
+  transition: .4s ease;
+}
+
+.letter-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 20px 35px rgba(0,0,0,.35);
+  border-color: var(--gold);
+}
+
+.letter-card:hover::before {
+  transform: rotateX(155deg);
+}
+
+.letter-card:hover::after {
+  transform: translate(-50%,-50%) scale(1.2);
+}
+
+.letter-card .emoji,
+.letter-card h3,
+.letter-card small {
+  position: relative;
+  z-index: 3;
+}
+
+.letter-card h3 {
+  color: #541c32;
+  font-family: 'Playfair Display', serif;
+}
+
+/* STEP 10 — PREMIUM SOUND BOX */
+
+.sound-item {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 24px;
+  margin: 22px 0;
+  background: linear-gradient(145deg, #fff8ef, #f3e3dc);
+  color: #321626;
+  border: 1px solid rgba(214,180,119,.65);
+  border-left: 6px solid #c49b60;
+  border-radius: 8px 22px 22px 8px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.24);
+  transition: .35s ease;
+}
+
+.sound-item::after {
+  content: "♫";
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  color: #c49b60;
+  opacity: .22;
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.sound-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(0,0,0,.32);
+}
+
+.sound-item h3 {
+  color: #541c32;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  position: relative;
+  z-index: 1;
+}
+
+.sound-item input[type="file"] {
+  display: block;
+  width: 100%;
+  margin: 18px 0;
+  padding: 10px;
+  background: #fff4e9;
+  color: #541c32;
+  border: 1px dashed #c49b60;
+  border-radius: 12px;
+}
+
+.sound-item audio {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 30px;
+}
+
+/* STEP 11 — CINEMATIC STAR FIELD */
+
+#stars {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 40%, #3c2036, #160b19 75%);
+  border-radius: 30px;
+}
+
+#stars .star-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0,1fr));
+  gap: 15px;
+  padding: 40px 20px;
+  min-height: 220px;
+  background: radial-gradient(circle at center, #2d1b36, #0d0710 85%);
+  border: 1px solid rgba(214,180,119,.3);
+  border-radius: 28px;
+}
+
+#stars .star {
+  min-height: 55px;
+  color: #d6b477;
+  font-size: 37px;
+  text-shadow: 0 0 12px rgba(214,180,119,.6);
+  animation: starGlow 2.5s ease-in-out infinite alternate;
+}
+
+#stars .star:nth-child(even) {
+  animation-delay: .8s;
+}
+
+@keyframes starGlow {
+  from {
+    opacity: .65;
+    transform: scale(.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+#stars .star:hover {
+  color: #fff0b5;
+  transform: scale(1.35) rotate(12deg);
+  text-shadow: 0 0 25px #f5d78c;
+}
+
+#stars .message-box {
+  position: relative;
+  background: rgba(255,244,233,.08);
+  border: 1px solid rgba(214,180,119,.55);
+  border-radius: 20px;
+  padding: 30px 22px;
+  color: #fff4e9;
+}
+
+@media(max-width:600px) {
+  #stars .star-grid {
+    gap: 7px;
+    padding: 30px 10px;
+  }
+
+  #stars .star {
+    font-size: 29px;
+  }
+}
+
+/* STEP 12 — FUTURE HADI SECRET VAULT */
+
+#future {
+  background: linear-gradient(145deg, #351b2a, #160b16);
+  border-radius: 28px 8px 28px 8px;
+}
+
+#futureLock {
+  background: linear-gradient(145deg, #351b2a, #1b0d17) !important;
+  border: 1px solid rgba(214,180,119,.8) !important;
+  border-radius: 30px 8px 30px 8px;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,244,233,.12);
+  transition: .4s ease;
+}
+
+#futureLock:hover {
+  box-shadow: 0 20px 55px rgba(214,180,119,.18);
+}
+
+#futureLock h2 {
+  color: #fff4e9;
+  font-family: 'Playfair Display', serif;
+}
+
+#futureLock input {
+  border-radius: 40px;
+  background: rgba(255,244,233,.07);
+  border: 1px solid rgba(214,180,119,.55);
+  padding: 16px;
+}
+
+#futureLetter .letter-content {
+  background: linear-gradient(145deg, #fff9f0, #f3e4dc);
+  color: #321626;
+  border: 1px solid #d6b477;
+  border-radius: 18px;
+  padding: 38px 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  line-height: 2;
+  white-space: pre-line;
+  box-shadow: 0 20px 45px rgba(0,0,0,.3);
+}
+
+@media(max-width:600px) {
+  #futureLock {
+    padding: 30px 17px !important;
+  }
+
+  #futureLetter .letter-content {
+    padding: 25px 19px;
+    font-size: 19px;
+  }
+}
+
+/* =========================================
+   BUBU x DUDU — BLACK, BURGUNDY & GOLD LOGIN
+========================================= */
+
+#login {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 90px 20px 65px;
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(105, 13, 43, .38), transparent 48%),
+    radial-gradient(circle at 5% 85%, rgba(112, 17, 42, .35), transparent 30%),
+    radial-gradient(circle at 95% 80%, rgba(112, 17, 42, .3), transparent 30%),
+    linear-gradient(135deg, #050505, #16060d 55%, #050505);
+}
+
+/* Fine golden glow around the whole scene */
+#login::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(214,180,119,.18);
+  border-radius: 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Decorative layer */
+.login-decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Individual doodles */
+.login-doodle {
+  position: absolute;
+  display: block;
+  line-height: 1;
+  user-select: none;
+  animation: loginFloat 6s ease-in-out infinite alternate;
+}
+
+.login-doodle.gold {
+  color: #f4d28e;
+  text-shadow: 0 0 8px #e6b95e, 0 0 22px #d6a94f;
+}
+
+.login-doodle.burgundy {
+  color: #a51f49;
+  text-shadow: 0 0 10px #8e1239, 0 0 25px #650d2b;
+}
+
+.login-doodle.cream {
+  color: #fff0cf;
+  text-shadow: 0 0 10px #f5d28c, 0 0 24px #d6a94f;
+}
+
+@keyframes loginFloat {
+  from { transform: translateY(-8px) rotate(-7deg); }
+  to   { transform: translateY(10px) rotate(7deg); }
+}
+
+/* Fairy lights at the top */
+.login-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  border-top: 2px solid rgba(214,180,119,.55);
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 8%,
+    rgba(214,180,119,.45) 8.1% 8.25%,
+    transparent 8.35% 16%
+  );
+  opacity: .8;
+}
+
+.login-lights::after {
+  content: "✦     ✧      ★       ✧       ✦       ★      ✧       ✦";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffe2a3;
+  font-size: clamp(17px, 3vw, 30px);
+  letter-spacing: 12px;
+  text-shadow: 0 0 10px #ffda83, 0 0 25px #d6a94f;
+  animation: lightTwinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes lightTwinkle {
+  from { opacity: .55; }
+  to { opacity: 1; }
+}
+
+/* Main decorative bow */
+.login-bow {
+  position: absolute;
+  z-index: 3;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #b51f4d;
+  font-size: clamp(65px, 12vw, 115px);
+  line-height: 1;
+  filter: drop-shadow(0 0 12px #8c1237);
+  text-shadow: 0 3px 0 #4b071e;
+  animation: bowSway 4s ease-in-out infinite alternate;
+}
+
+@keyframes bowSway {
+  from { transform: translateX(-50%) rotate(-4deg); }
+  to { transform: translateX(-50%) rotate(4deg); }
+}
+
+/* Central luxury card */
+#login .login-card {
+  position: relative;
+  z-index: 4;
+  width: min(560px, 100%);
+  max-width: 560px;
+  padding: 55px 38px 38px;
+  overflow: visible;
+  border: 1px solid #d6b477;
+  border-radius: 8px 8px 35px 35px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(117,22,53,.32), transparent 55%),
+    linear-gradient(145deg, rgba(13,8,10,.97), rgba(35,5,17,.97));
+  box-shadow:
+    0 0 0 5px rgba(214,180,119,.08),
+    0 0 35px rgba(214,180,119,.2),
+    0 25px 80px rgba(0,0,0,.75),
+    inset 0 0 35px rgba(130,25,57,.16);
+}
+
+/* Inner gold frame */
+#login .login-card::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(214,180,119,.4);
+  border-radius: 5px 5px 27px 27px;
+  pointer-events: none;
+}
+
+/* Tiny ornamental bottom flourish */
+#login .login-card::after {
+  content: "✧  ♡  ୨୧  ♡  ✧";
+  display: block;
+  margin-top: 22px;
+  color: #d6b477;
+  font-size: 22px;
+  letter-spacing: 7px;
+  text-shadow: 0 0 12px #d6b477;
+}
+
+#login .eyebrow {
+  position: relative;
+  z-index: 1;
+  color: #e8c98e;
+  font-size: 10px;
+  letter-spacing: 4px;
+  line-height: 1.8;
+}
+
+#login .heart {
+  margin: 12px 0;
+  color: #d6b477;
+  font-size: 28px;
+  text-shadow: 0 0 15px #d6b477;
+}
+
+#login .login-card h1 {
+  position: relative;
+  z-index: 1;
+  margin: 14px 0;
+  color: #f4dcae;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 8vw, 64px);
+  font-style: italic;
+  line-height: 1.1;
+  text-shadow: 0 0 20px rgba(214,180,119,.28);
+}
+
+#login .subtitle {
+  position: relative;
+  z-index: 1;
+  color: #ead9c4;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Password field */
+#login input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 25px 0 16px;
+  padding: 16px 18px;
+  border: 1px solid #d6b477;
+  border-radius: 40px;
+  background: rgba(255,244,233,.06);
+  color: #fff4e9;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-align: center;
+  box-shadow: inset 0 0 15px rgba(214,180,119,.06);
+}
+
+#login input::placeholder {
+  color: #d8bd91;
+  opacity: .85;
+}
+
+#login input:focus {
+  outline: none;
+  border-color: #ffe2a3;
+  box-shadow: 0 0 0 4px rgba(214,180,119,.12), 0 0 20px #d6b47755;
+}
+
+/* Golden unlock button */
+#login .main-btn {
+  position: relative;
+  z-index: 1;
+  width: min(300px, 100%);
+  padding: 16px 25px;
+  border: 1px solid #fff0c7;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f5d99e, #c99a50 55%, #f0d08c);
+  color: #250912;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  box-shadow: 0 0 18px rgba(214,180,119,.35), inset 0 1px 5px #fff8df;
+}
+
+#login .main-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 0 28px rgba(214,180,119,.65);
+}
+
+#login .error {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #login {
+    padding: 115px 18px 45px;
+  }
+
+  #login .login-card {
+    padding: 45px 22px 30px;
+  }
+
+  .login-bow {
+    top: 35px;
+    font-size: 72px;
+  }
+
+  .login-doodle {
+    opacity: .75;
+  }
+
+  .login-lights {
+    height: 65px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-doodle,
+  .login-bow,
+  .login-lights::after {
+    animation: none !important;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<div class="stars-bg"></div>
+
+<!-- FLOATING DOODLE DECORATIONS -->
+<div class="doodle-layer" aria-hidden="true">
+  <span class="doodle" style="top:12%;left:5%;">✧</span>
+  <span class="doodle" style="top:70%;left:88%;color:#E8BDC9;">♡</span>
+  <span class="doodle" style="top:85%;left:12%;">✿</span>
+  <span class="doodle" style="top:20%;left:92%;">⋆</span>
+  <span class="doodle" style="top:50%;left:2%;">❀</span>
+  <span class="doodle" style="top:40%;left:95%;color:#E8BDC9;">♡</span>
+  <span class="doodle" style="top:8%;left:70%;">✦</span>
+</div>
+
+
+<!-- BUBU x DUDU — DECORATED PASSWORD SCREEN -->
+
+<section id="login">
+
+  <div class="login-decor" aria-hidden="true">
+
+    <div class="login-lights"></div>
+
+    <!-- Big top bow -->
+    <div class="login-bow">୨୧</div>
+
+    <!-- Left side decorations -->
+    <span class="login-doodle gold" style="top:17%;left:5%;font-size:65px;">♡</span>
+    <span class="login-doodle burgundy" style="top:43%;left:3%;font-size:52px;">♥</span>
+    <span class="login-doodle cream" style="top:68%;left:8%;font-size:38px;">✦</span>
+    <span class="login-doodle gold" style="top:30%;left:17%;font-size:27px;">✧</span>
+    <span class="login-doodle burgundy" style="top:78%;left:18%;font-size:42px;">🌹</span>
+
+    <!-- Right side decorations -->
+    <span class="login-doodle gold" style="top:18%;right:6%;font-size:45px;">☾</span>
+    <span class="login-doodle burgundy" style="top:43%;right:4%;font-size:58px;">♡</span>
+    <span class="login-doodle cream" style="top:65%;right:9%;font-size:37px;">✦</span>
+    <span class="login-doodle gold" style="top:34%;right:17%;font-size:27px;">✧</span>
+    <span class="login-doodle burgundy" style="top:78%;right:17%;font-size:43px;">🌹</span>
+
+    <!-- Small scattered stars -->
+    <span class="login-doodle cream" style="top:12%;left:28%;font-size:20px;">✦</span>
+    <span class="login-doodle gold" style="top:24%;left:30%;font-size:18px;">✧</span>
+    <span class="login-doodle cream" style="top:15%;right:29%;font-size:22px;">★</span>
+    <span class="login-doodle gold" style="top:55%;left:7%;font-size:20px;">✧</span>
+    <span class="login-doodle cream" style="top:54%;right:7%;font-size:20px;">✦</span>
+    <span class="login-doodle gold" style="bottom:9%;left:38%;font-size:23px;">✧</span>
+    <span class="login-doodle cream" style="bottom:8%;right:38%;font-size:23px;">✦</span>
+
+    <!-- Cute gifts and love details -->
+    <span class="login-doodle burgundy" style="bottom:5%;left:3%;font-size:43px;">🎁</span>
+    <span class="login-doodle gold" style="bottom:5%;right:3%;font-size:42px;">🏮</span>
+    <span class="login-doodle cream" style="bottom:13%;left:23%;font-size:35px;">💌</span>
+    <span class="login-doodle burgundy" style="bottom:13%;right:23%;font-size:35px;">🎀</span>
+
+    <!-- Teddy bears -->
+    <span class="login-doodle" style="bottom:2%;left:10%;font-size:clamp(38px,6vw,65px);">🧸</span>
+    <span class="login-doodle" style="bottom:2%;right:10%;font-size:clamp(38px,6vw,65px);">🧸</span>
+
+    <!-- Butterfly details -->
+    <span class="login-doodle gold" style="top:48%;left:20%;font-size:27px;">🦋</span>
+    <span class="login-doodle gold" style="top:48%;right:20%;font-size:27px;">🦋</span>
+
+  </div>
+
+  <div class="login-card">
+
+    <div class="eyebrow">A LITTLE WORLD MADE JUST FOR YOU</div>
+
+    <div class="heart">♡</div>
+
+    <h1>For My DUDU ♡</h1>
+
+    <p class="subtitle">
+      A collection of letters, moments, music and
+      endless love — only for you. ♡
+    </p>
+
+    <p style="color:#e2c28a;font-family:'Cormorant Garamond';
+    font-size:17px;font-style:italic;margin-top:20px;line-height:1.8">
+      Hint: Aap mujhe sabse pyaar se kya bulate ho?
+      <br>
+      Aap mere DUDU aur main aapki...?
+    </p>
+
+    <input
+      id="password"
+      type="password"
+      placeholder="ENTER THE PASSWORD"
+    >
+
+    <button class="main-btn" onclick="enterSite()">
+      UNLOCK ♡
+    </button>
+
+    <p id="loginError" class="error"></p>
+
+    <p class="subtitle" style="margin-top:25px;font-size:19px;font-style:italic">
+      Made with endless love, by your BUBU. ♡
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- MAIN WEBSITE -->
+<div id="app">
+<header>
+ <div class="logo">BUBU <span>♡</span> DUDU</div>
+ <div class="header-note">MADE WITH ENDLESS LOVE</div>
+</header>
+
+<section class="hero">
+ <div class="eyebrow">A secret little universe</div>
+ <h1>For My JAANU</h1>
+ <p>Six little surprises, one endless love story.</p>
+ <div class="heart" style="margin-top:20px">✧ ♡ ✧</div>
+</section>
+
+<section id="home">
+ <div class="section-title">
+  <h2>Your Secret Surprises</h2>
+  <p>Choose a little surprise, my love. Every corner has something for you.</p>
+ </div>
+
+ <div class="grid">
+  <div class="feature" onclick="showPage('letters')">
+   <div class="emoji">💌</div><h3>Open When Letters</h3>
+   <p>12 little letters for 12 different moments.</p>
+  </div>
+  <div class="feature" onclick="showPage('sound')">
+   <div class="emoji">🎧</div><h3>BUBU's Sound Box</h3>
+   <p>Little pieces of my voice, saved just for you.</p>
+  </div>
+  <div class="feature" onclick="showPage('hunt')">
+   <div class="emoji">🗝️</div><h3>Birthday Treasure Hunt</h3>
+   <p>Follow the clues and discover your hidden surprise.</p>
+  </div>
+  <div class="feature" onclick="showPage('stars')">
+   <div class="emoji">🌟</div><h3>A Star For DUDU</h3>
+   <p>Little wishes and duas written in the stars.</p>
+  </div>
+  <div class="feature" onclick="showPage('future')">
+   <div class="emoji">🎀</div><h3>Letter To Future Hadi</h3>
+   <p>A letter waiting for your eighteenth birthday.</p>
+  </div>
+  <div class="feature" onclick="showPage('quiz')">
+   <div class="emoji">🧸</div><h3>How Well Does BUBU Know DUDU?</h3>
+   <p>Let's see how much I remember about my favourite boy.</p>
+  </div>
+ </div>
+</section>
+
+<!-- LETTERS -->
+<section id="letters" class="page hidden">
+ <button class="back" onclick="goHome()">← BACK TO SURPRISES</button>
+ <h2>Open When... ♡</h2>
+ <p class="page-intro">For every mood, every moment, and every version of you.</p>
+ <div class="letter-grid" id="letterGrid"></div>
+ <div id="letterContent" class="letter-content hidden"></div>
+</section>
+
+<!-- SOUND BOX -->
+<section id="sound" class="page hidden">
+ <button class="back" onclick="goHome()">← BACK TO SURPRISES</button>
+ <h2>BUBU's Sound Box 🎧</h2>
+ <p class="page-intro">
+  Six little voice messages from your BUBU. 
+  Har recording sirf tumhare liye. ♡
+ </p>
+ <div id="soundList"></div>
+</section>
+
+<!-- TREASURE HUNT -->
+<section id="hunt" class="page hidden">
+ <button class="back" onclick="goHome()">← BACK TO SURPRISES</button>
+ 
+<h2>Chalo Jaan, Hamari Memories Yaad Karo! 🗝️</h2>
+
+<p class="page-intro">
+Achaaa meri jaan, ab dekhte hain tumhein hamari story kitni yaad hai! 😂❤️
+5 clues hain aur har clue hamari kisi na kisi memory se related hai.
+No cheating okayyy? Let's see kitna yaad hai mere DUDU ko!
+</p>
+
+<div id="huntArea"></div>
+
+<div id="treasureReward" class="message-box hidden">
+ YAYYYY! Mera baby jeet gaya!! 😭❤️<br>
+ Tumhein hamari itni sari memories yaad hain!
+ Chiku ki shaadi se shuru hone wali hamari story ko
+ 3 saal ho gaye aur honestly, tum mere liye bohat special ho.<br>
+ Mera favourite treasure toh mera DUDU hi hai.
+ I LOVE YOU SOOO MUCHH, MERI JAAN! ♡
+</div>
+
+</section>
+
+<!-- STARS -->
+<section id="stars" class="page hidden">
+ <button class="back" onclick="goHome()">← BACK TO SURPRISES</button>
+<h2>Meri Jaan Ke Naam Kuch Stars 🌟</h2>
+<p class="page-intro">
+Har star mein tumhare liye ek choti si dua aur ek little wish hai.
+Sab open karna, koi skip nahi karna, okay baby? ❤️
+</p>
+ <div class="star-grid" id="starGrid"></div>
+ <div id="starMessage" class="message-box">Choose a star, my love ♡</div>
+</section>
+
+<!-- FUTURE LETTER -->
+
+<!-- FUTURE LETTER - SECRET VAULT -->
+<section id="future" class="page hidden">
+
+ <button class="back" onclick="goHome()">← BACK TO SURPRISES</button>
+
+ <div style="text-align:center;padding:30px 10px">
+
+  <div style="font-size:50px;margin-bottom:15px">🔐</div>
+
+  <p class="eyebrow">A SECRET FROM YOUR BUBU</p>
+
+  <h2 style="margin:15px 0">For My Future Hadi ♡</h2>
+
+  <p class="page-intro">
+   Ye letter abhi open nahi karnaaa, meri jaan! 😭❤️
+   Iska password apko tab pata chale ga jab ap 18 years ke ho jaoge.
+   <br><br>
+   Tab tak ke liye wait kro.
+   <br>
+   I LOVE YOU MY LOVE. ❤️
+  </p>
+
+ </div>
+
+ <div id="futureLock" style="max-width:550px;margin:auto;text-align:center;padding:35px 22px;background:#24131f;border:1px solid #d6b47777">
+
+  <div style="font-size:55px;margin-bottom:18px">💌</div>
+
+  <h2 style="font-size:27px">A Letter Just For You</h2>
+
+  <p class="subtitle" style="margin:18px 0">
+   Locked with love, saved for your 18th birthday.
+  </p>
+
+  <div style="font-size:35px;margin:20px">🔒 ✧ 🔒</div>
+
+  <p style="color:#d6b477;font-size:11px;letter-spacing:2px">
+   WAIT FOR YOUR SPECIAL DAY
+  </p>
+
+  <input
+   id="futurePass"
+   type="password"
+   placeholder="Enter your secret password..."
+   style="margin:22px 0;text-align:center;letter-spacing:3px"
+   onkeydown="if(event.key==='Enter')unlockFutureLetter()"
+  >
+
+  <button class="main-btn" onclick="unlockFutureLetter()">
+   OPEN MY LETTER ♡
+  </button>
+
+  <p id="futureError" class="error"></p>
+
+ </div>
+
+ <div id="futureLetter" class="hidden">
+
+  <div class="letter-content">
+Hello mere future wale Hadiii! ❤️
+
+Soooo, finally tum 18 ke ho gaye!! 😭
+
+I can't believe time itni jaldi guzar gaya.
+
+Pata nahi ab tum kitne change ho gaye hoge,
+kitni new memories bana li hongi aur kitne dreams
+achieve kar liye honge. But I really hope ke tum
+bohat khush ho aur life mein bohat aage ja rahe ho.
+
+Meri jaan, yaad hai hamari baat Chiku ki shaadi
+se shuru hui thi? Aur ab humein saath 3 saal ho
+gaye hain. Honestly, ye 3 years mere liye bohat
+special rahe hain.
+
+Tumhara funny hona, cute hona, thora possessive
+hona, emotional hona aur kabhi kabhi itna gussa
+karna ke bas Allah hi bachaye 😂 — ye sab tumhari
+personality ka part hai, aur tum mere liye bohat
+special ho.
+
+Mujhe pata hai tumhein bikes aur cars ka kitna
+shok hai, aur tumhara favourite Zinger Burger
+bhi nahi bhooli main. Hehe!
+
+I pray ke Allah tumhein har buri cheez se bachaye,
+tumhare saare dreams poore kare aur tumhein
+bohat success de.
+
+Aur haan, chahe tum 18 ke ho jao ya 80 ke,
+mere liye tum hamesha mere wohi cutie jaanu,
+mera bacha aur mera DUDU rahoge. ❤️
+
+Main chahti hoon ke hum hamesha saath rahein,
+khush rahein aur ek dusre ko aise hi pyaar karte
+rahein.
+
+I MISS YOU SOOO MUCHH, MY LOVE.
+
+HAPPY 18TH BIRTHDAY, MERI JAAN!
+
+With aloooot of love,
+Always your BUBU. ♡
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- QUIZ -->
+<section id="quiz" class="page hidden">
+ <button class="back" onclick="goHome()">← BACK TO SURPRISES</button>
+ <h2>Kitna Jaante Ho Apni BUBU Ko? 🧸</h2>
+<p class="page-intro">
+Achaaa mere DUDU, ab tumhara test hone wala hai! 😂
+Dekhte hain tumhein hamari aur apni BUBU ki kitni baatein yaad hain.
+No cheating, warna BUBU pakar legi! Hehe. ❤️
+</p>
+ <div class="quiz-box">
+  <div id="quizQuestion"></div>
+  <div id="quizOptions"></div>
+  <p id="quizFeedback" class="feedback"></p>
+  <button id="nextQuestion" class="main-btn hidden" onclick="nextQuiz()">NEXT QUESTION →</button>
+  <div id="quizResult" class="message-box hidden"></div>
+  <button id="restartQuiz" class="main-btn hidden" onclick="startQuiz()">PLAY AGAIN ♡</button>
+ </div>
+</section>
+
+<footer>
+ Made with all the love in my heart ♡<br>
+ <span style="font-size:13px;color:var(--gold)">Always your BUBU. Always my DUDU.</span>
+</footer>
+</div>
+
+<script>
+// PASSWORD
+function enterSite(){
+ const pass=document.getElementById('password').value;
+ if(pass.trim().toUpperCase()==='BUBU'){
+  document.getElementById('login').style.display='none';
+  document.getElementById('app').style.display='block';
+ }else{
+  document.getElementById('loginError').textContent='Oops! Wrong password, try again ♡';
+ }
+}
+document.getElementById('password').addEventListener('keydown',e=>{
+ if(e.key==='Enter')enterSite();
+});
+
+// PAGE NAVIGATION
+
+// FUTURE HADI SECRET VAULT
+
+const futurePassword = "HADI18";
+
+function unlockFutureLetter(){
+
+ const entered = document.getElementById('futurePass').value.trim();
+
+ if(entered.toUpperCase() === futurePassword){
+
+  document.getElementById('futureLock').classList.add('hidden');
+
+  document.getElementById('futureLetter').classList.remove('hidden');
+
+  document.getElementById('futureError').textContent = '';
+
+ }else{
+
+  document.getElementById('futureError').textContent =
+  'Not yet, my love. Wait for your 18th birthday. ❤️';
+
+ }
+
+}
+
+const pages=['letters','sound','hunt','stars','future','quiz'];
+function showPage(id){
+ document.getElementById('home').classList.add('hidden');
+ pages.forEach(p=>document.getElementById(p).classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function goHome(){
+ pages.forEach(p=>document.getElementById(p).classList.add('hidden'));
+ document.getElementById('home').classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// OPEN WHEN LETTERS
+
+const letters = [
+[
+'Open When You Miss Me ♡',
+`My dearest Dudu,
+
+Awww, mera jaanu mujhe miss kar raha hai? 🥺
+
+Pata hai, kabhi kabhi mujhe bhi bohat dil karta hai ke hum paas hote. Tumhare saath beth kar random baatein karti, tumhein tang karti, tumhari baatein sunti aur bas tumhare saath thora sa waqt guzaarti.
+
+Lekin Dudu, ek baat yaad rakhna: door rehne ka matlab ye bilkul nahi ke tum mujhse door ho.
+
+Tum meri har dua mein, meri bohat si sochon mein aur mere dil ke bohat qareeb ho.
+
+Jab bhi meri yaad aaye, bas ye sochna ke kahin apki BUBU bhi apko yaad kar rahi hogi.
+
+Aur haan, jab milenge na, toh tumhein bohat saari hugs aur chumiyan mileingi. Hehe. 🫂
+
+I miss you too, my cutie.
+
+And I LOVE YOU JAANU.
+
+Lots of love,
+Your BUBU ♡`
+],
+[
+"Open When You're Sad 🥺",
+`Meri Pyari si Jaan,
+
+Aaj kya hua, meri jaan? Dil udaas hai?
+
+Sabse pehle ek imaginary hug le lo. 🫂
+
+Dudu, main chahti hoon ap ye baat hamesha yaad rakho ke har din khush rehna zaroori nahi hota. Kabhi kabhi udaas hona, thak jana aur kisi baat se hurt hona bhi bilkul normal hai.
+
+Tumhein har waqt strong banne ka drama karne ki zaroorat nahi.
+
+Agar kabhi dil bohat bhaari ho, toh apne aap ko thora waqt dena. Ro lena ho toh ro lena, araam karna ho toh kar lena. Bas apne aap ko kabhi akela mat samajhna.
+
+Tumhari value kisi ek bure din, kisi mistake ya kisi ki opinion se kam nahi hoti.
+
+Allah tumhare dil ko sukoon de aur tumhari har pareshani asaan kare.
+
+Aur yaad rakhna, Apka Baby apse bohat pyaar karta hai.
+
+It's okay, my jaan. Better days will come. ♡
+
+I LOVE YOU MY LOVE.
+
+Forever your BUBU.`
+],
+[
+'Open When You Need A Smile 😂',
+`OYE MERAY DUDU!
+
+Kya hua? Itna serious kyun bana hua hai? Tumhein kisne ijazat di hai itna boring rehne ki? 😭😂
+
+Chalo, ab smile karo!
+
+Tumhein pata hai tum kabhi kabhi kitne funny ho? Aur kabhi kabhi itne cute ke dil karta hai tumhein tang karti rahun.
+
+Lekin ek baat clear hai: Apki BUBU duniya ki sabse innocent aur shareef insan hai. Ap hi mujhe tang karte ho. Haan ji! 😂
+
+Aaj ke liye tumhara special task:
+
+1. Ek achhi si smile do.
+2. Apni favourite cheez karo.
+3. Kuch tasty khao.
+4. Aur apni BUBU ko yaad karke thora sa smile kr do.
+
+Life mein har waqt serious rehna zaroori nahi, mere jaan. Thori si masti bhi honi chahiye!
+
+Now smile, you little troublemaker!
+
+You drama queen. heheh
+
+Love you, DUDU! ♡`
+],
+[
+'Open When You Feel Alone 🌙',
+`My sweet Dudu,
+
+Kabhi kabhi insaan logon ke darmiyan reh kar bhi akela mehsoos karta hai.
+
+Agar aaj tumhara dil bhi kuch aisa mehsoos kar raha hai, toh meri baat sunna.
+
+Tumhein har kisi ke saamne apni feelings explain karne ki zaroorat nahi. Har kisi se samjhe jaane ki umeed bhi mat rakhna.
+
+Lekin please, apne dil mein sab kuch daba kar mat rakhna. Kis trustworthy insan se baat karna. Aur jab dil kare, apni BUBU ko bhi bata dena.
+
+Main chahti hoon tumhein hamesha aise log milen jo tumhari khamoshi bhi samajh saken, tumhari khushi mein khush hon aur mushkil waqt mein tumhara saath dein.
+
+Aur Dudu, tum kabhi bhi kisi ke liye kam important nahi ho.
+
+Allah tumhare dil ko hamesha apni rehmat aur sukoon se bharay.
+
+You are loved, more than you know.
+
+I LOVE YOU MERI JAAN..
+
+Your BUBU ♡`
+],
+[
+'Open When You Need Motivation ✨',
+`LISTEN UP, MY DUDU!
+
+Mujhe pata hai tumhare bohat se dreams hain, aur main chahti hoon tum un sab ko poora karne ki koshish karo.
+
+Lekin meri ek baat yaad rakhna:
+
+Har successful insan ki journey mein failures, mistakes aur difficult days aate hain.
+
+Agar kabhi kisi cheez mein fail ho jao, iska matlab ye nahi ke tum capable nahi ho. Iska matlab sirf ye hai ke tumhein dobara koshish karni hai aur kuch naya seekhna hai.
+
+Apne aap ko doosron se compare mat karna. Tumhari journey tumhari apni hai.
+
+Chotay chotay steps lo, consistency rakho aur Allah par bharosa rakho.
+
+Main tumhein sirf successful dekhna nahi chahti, main tumhein ek achha, kind, confident aur khush insan banta hua dekhna chahti hoon.
+
+One day, you'll look back and be proud that you never gave up.
+
+I believe in you, my jaan.
+
+Your biggest cheerleader,
+BUBU ♡`
+],
+[
+"Open When You're Angry 😤",
+`OHO! MERA DUDU GHUSSE MEIN HAI!
+
+Pehle toh ek kaam karo: thora sa paani piyo aur gehri saans lo. 😭
+
+Ab meri baat suno.
+
+Gussa aana buri baat nahi hai. Kabhi kabhi situations aur log humein bohat frustrate kar dete hain.
+
+Lekin Dudu, apne gusse ko kabhi apne decisions control mat karne dena.
+
+Jab bohat gussa ho, toh foran kuch aisa mat keh dena ya kar dena jiska baad mein afsos ho.
+
+Thora waqt lo, calm ho jao, phir sochna ke asal masla kya tha.
+
+Aur haan, tumhari BUBU ki taraf se ek special order:
+
+Apni cute si smile ko itni dair ke liye bhi disappear mat hone dena. 😂
+
+I hope ab tumhara gussa thora kam ho gaya hoga.
+
+Love you, my little angry bird! ♡`
+],
+[
+"Open When You Can't Sleep 🌙",
+`Hey, my sleepy Dudu!
+
+Abhi tak jaag rahe ho? Kya chal raha hai tumhare chotay se dimagh mein? 🥺
+
+Kabhi kabhi raat ko na, din bhar ki saari baatein yaad aane lagti hain. Kuch thoughts khushi dete hain aur kuch bina wajah pareshan kar dete hain.
+
+Lekin abhi ke liye sab kuch side par rakh do.
+
+Tumne aaj jitna kar sakte thay, kiya. Jo reh gaya, woh kal ho jayega.
+
+Har cheez ka solution isi waqt dhoondhna zaroori nahi hota.
+
+Thora relax karo, apni aankhein band karo aur Allah ka shukar ada karo un choti choti blessings ke liye jo tumhari zindagi mein hain.
+
+Meri dua hai tumhara har din khairiyat se guzray aur tumhein sukoon bhari neend aaye.
+
+Aur haan, dreams mein bhi apni BUBU ko tang mat karna! 😂
+
+Goodnight, my jaan. Sleep peacefully.
+
+I LOVE YOUU..
+
+Forever your BUBU ♡`
+],
+[
+'Open When You Achieve Something 🏆',
+`MY DUDU, YOU DID IT!!!
+
+AAAH! MERA BACHAAA! 😭❤️
+
+Mujhe tum par bohat fakhar hai!
+
+Chahe tumne koi bara goal achieve kiya ho ya koi choti si cheez jis ke liye tumne mehnat ki, main chahti hoon tum apni is achievement ko celebrate karo.
+
+Tumhari mehnat, tumhari consistency aur tumhara patience bohat matter karta hai.
+
+Aur please, kabhi apni achievements ko chota mat samajhna. Har progress important hoti hai.
+
+Main dua karti hoon ke Allah tumhein is se bhi zyada kamyabiyan de, tumhare liye naye raste kholay aur tumhein hamesha apni kamyabi par shukar ada karne wala banaye.
+
+Aaj toh celebration banta hai!
+
+Aur mujhe bhi apni achievement ke baare mein batana mat bhoolna.
+
+Your BUBU is SO proud of you!
+
+Biggest hugs and lots of love! ♡`
+],
+[
+'Open When You Doubt Yourself 🫶',
+`Mere pyaare JAANU,
+
+Agar kabhi tumhein lage ke tum kisi cheez ke liye kaafi nahi ho, ya tum apne aap par yaqeen khona shuru kar do, toh please ye letter dobara parhna.
+
+Tumhein perfect hone ki zaroorat nahi.
+
+Tumse mistakes hongi, kabhi tum confuse hoge, kabhi tumhara confidence low hoga. Lekin ye sab tumhari worth define nahi karta.
+
+Apni achhaiyon ko pehchano, apni kamiyon se seekho aur khud ko grow karne ka mauqa do.
+
+Har kisi ki life mein apna alag waqt aur apni alag journey hoti hai.
+
+Mujhe tumhara har waqt best hona nahi chahiye. Main chahti hoon tum apne aap se khush raho, apni izzat karo aur apni asli personality kabhi mat khona.
+
+Tumhein khud par yaqeen rakhna seekhna hai, mera Baby.
+
+You are enough. You always have been.
+
+I LOVE YOU SO MUCHH..
+
+With all my love,
+Your BUBU ♡`
+],
+[
+'Open When You Need A Hug 🫂',
+`AWWW, MERA JAANU HUG CHAHTA HAI!
+
+Idhar aao pehle! Ek bohat bara sa Imaginary hug le lo. 🫂❤️
+
+Kaash main abhi tumhare paas hoti, tumhein tight si jhappi deti aur kehti ke sab theek ho jayega.
+
+Kabhi kabhi na, humein kisi advice ki zaroorat nahi hoti. Bas kisi apne ka saath chahiye hota hai.
+
+Toh aaj meri taraf se tumhare liye ek reminder:
+
+Tumhein hamesha strong ban kar rehne ki zaroorat nahi. Tum bhi rest deserve karte ho, care deserve karte ho aur bohat saari mohabbat deserve karte ho.
+
+Apna khayal rakha karo, apne aap ko time diya karo aur kabhi ye mat bhoolna ke tum bohat special ho.
+
+Ab imagine karo ke tumhari BUBU tumhein hug kar rahi hai aur tumhein chhorne ka naam hi nahi le rahi. 😂
+
+One endless hug for my favourite boy.
+
+AND I LOVE YOU MY BABY..
+
+Your BUBU ♡`
+],
+[
+'Open When You Want To Remember Us 📸',
+`My favourite Dudu,
+
+Chalo aaj thori si yaadon ki duniya mein chalte hain.
+
+Kabhi socha hai ke hamari zindagi kitni saari choti choti memories se bani hui hai?
+
+Woh random baatein, hasi mazaak, choti moti narazgiyan aur woh moments jinhein shayad us waqt humne itna important nahi samjha, lekin aaj yaad karne par chehre par smile aa jati hai.
+
+Mujhe nahi pata aage kia hoga life kesi hogi lekin mujhe apni life humeha apke pass aur apke sath guzrni hai bcz i cant live without you jaan.
+
+Main chahti hoon ke hum apne is bond ko hamesha sambhal kar rakhein.
+
+Main nahi chahti ke hum sirf purani memories tak limited rahen. Main chahti hoon hum aage bhi bohat si khoobsurat memories banayein.
+
+Aur ek baat:
+
+Tumhari BUBU tumhein tang karna kabhi band nahi karegi. So better get used to it! 😂
+
+Here's to our memories, and all the beautiful ones yet to come.
+
+Love you, Dudu! ♡`
+],
+[
+'Open on a Day You Need To Feel Loved ❤️',
+`To my favourite boy, my Hadi, my Dudu...
+
+Agar tum ye letter parh rahe ho, toh main chahti hoon ke tum isay aahista aahista parho.
+
+Ho sakta hai aaj tumhara din achha na ho. Ho sakta hai tum kisi baat se pareshan ho, ya bas tumhein kisi apne ki mohabbat mehsoos karne ka dil kar raha ho.
+
+Toh meri baat suno.
+
+Tum meri zindagi ka bohat pyara hissa ho. Tumhara hona mere liye ek blessing hai aur main Allah ka shukar ada karti hoon ke tum meri life mein ho.
+
+Main shayad har baar tumhein bata na paun ke tum mere liye kitne important ho, lekin iska matlab ye kabhi nahi ke meri mohabbat kam hai.
+
+Main tumhari khushiyon ke liye dua karti hoon, tumhari kamyabi dekhna chahti hoon aur chahti hoon ke tumhari zindagi mein hamesha achhe log, achhe mauqay aur bohat saara sukoon ho.
+
+Jab bhi tumhein lage ke tumhein koi yaad dilaye ke tum kitne special ho, toh ye letter khol lena.
+
+Tum mere liye sirf ek birthday wish nahi, sirf ek memory nahi, balkay meri zindagi ka woh rishta ho jise main hamesha sambhal kar rakhna chahti hoon.
+
+Aur chahe duniya kitni bhi badal jaye...
+
+Mere liye tum hamesha mere cutie DUDU rahoge.
+
+I love you endlessly, my jaan.
+
+Forever and always,
+YOUR BUBU. ♡`
+]
+];
+
+
+const letterGrid=document.getElementById('letterGrid');
+letters.forEach((l,i)=>{
+ const card=document.createElement('div');
+ card.className='letter-card';
+ card.innerHTML=`<div class="emoji">💌</div><h3>${l[0]}</h3><small>LETTER ${String(i+1).padStart(2,'0')}</small>`;
+ card.onclick=()=>{
+  const box=document.getElementById('letterContent');
+  box.textContent=l[1]+'\n\nForever your BUBU ♡';
+  box.classList.remove('hidden');
+  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+ };
+ letterGrid.appendChild(card);
+});
+
+// SOUND BOX — BUBU'S SIX VOICE MESSAGES
+
+const soundList = document.getElementById('soundList');
+
+const soundMessages = [
+
+ {
+  title: 'A Little Message from Your BUBU',
+  description: 'A little hello, straight from BUBU. ♡',
+  file: 'audio/01-little-message.mp3',
+  icon: '💌'
+ },
+
+ {
+  title: 'When You Miss Your BUBU',
+  description: 'For the moments when you wish BUBU was right there. ♡',
+  file: 'audio/02-when-you-miss-bubu.mp3',
+  icon: '🌙'
+ },
+
+ {
+  title: 'Your Personal Hug and Comfort',
+  description: 'A little comfort whenever you need it. ♡',
+  file: 'audio/03-personal-hug-comfort.mp3',
+  icon: '🧸'
+ },
+
+ {
+  title: 'A Goodnight Kiss from BUBU',
+  description: 'A soft goodnight from your BUBU. ♡',
+  file: 'audio/04-goodnight-kiss.mp3',
+  icon: '🌟'
+ },
+
+ {
+  title: 'A Birthday Message Just for You',
+  description: 'Your special birthday message, made with love. ♡',
+  file: 'audio/05-birthday-message.mp3',
+  icon: '🎂'
+ },
+
+ {
+  title: 'One Promise from Your BUBU',
+  description: 'One promise you can always keep close. ♡',
+  file: 'audio/06-one-promise.mp3',
+  icon: '🎀'
+ }
+
+];
+
+const soundPlayers = [];
+
+soundMessages.forEach((message, index) => {
+
+ const item = document.createElement('article');
+ item.className = 'sound-item';
+
+ item.innerHTML = `
+  <div class="sound-heading">
+   <span class="sound-icon">${message.icon}</span>
+
+   <div class="sound-copy">
+    <h3>${message.title}</h3>
+    <p>${message.description}</p>
+   </div>
+  </div>
+
+  <audio controls preload="none">
+   <source src="${message.file}" type="audio/mpeg">
+   Your browser does not support audio playback.
+  </audio>
+
+  <span class="sound-number">
+   BUBU'S VOICE MESSAGE · 0${index + 1}
+  </span>
+ `;
+
+ const player = item.querySelector('audio');
+
+ player.addEventListener('play', () => {
+  soundPlayers.forEach(other => {
+   if (other !== player) other.pause();
+  });
+ });
+
+ soundPlayers.push(player);
+ soundList.appendChild(item);
+
+});
+
+// TREASURE HUNT
+
+const clues=[
+ {
+  q:'Clue 1: Hamari baat sabse pehle kiski shaadi mein shuru hui thi?',
+  a:'chiku ki shadi',
+  hint:'Hamari favourite cousin ki wedding!'
+ },
+ {
+  q:'Clue 2: Is saal hamare saath ke kitne years complete hue?',
+  a:'3',
+  hint:'Teen saal ki hamari cute si story!'
+ },
+ {
+  q:'Clue 3: Mere DUDU ka favourite food kya hai?',
+  a:'zinger burger',
+  hint:'Crispy, yummy aur tumhara favourite burger!'
+ },
+ {
+  q:'Clue 4: Tumhara favourite colour konsa hai?',
+  a:'black',
+  hint:'Aisa colour jo tumhari bikes aur cars wali vibe se bhi match karta hai.'
+ },
+ {
+  q:'Clue 5: Hadi Ghadiya ko pyaar se kya bolata hai?',
+  a:'chipkali',
+  hint:'HAHAHA ye wala inside joke bhoolna mat!'
+ }
+];
+
+let clueIndex=0;
+function renderClue(){
+ const area=document.getElementById('huntArea');
+ if(clueIndex>=clues.length){
+  document.getElementById('treasureReward').classList.remove('hidden');
+  area.innerHTML='<p class="message-box">All clues completed! ♡</p>';
+  return;
+ }
+ const c=clues[clueIndex];
+ area.innerHTML=`<div class="clue-box"><h3>${c.q}</h3><p>Hint: ${c.hint}</p><input id="clueAnswer" placeholder="Your answer..."><button class="main-btn" onclick="checkClue()">UNLOCK NEXT CLUE</button><p id="clueFeedback" class="feedback"></p></div>`;
+}
+function checkClue(){
+ const answer=document.getElementById('clueAnswer').value.trim().toLowerCase();
+ if(answer===clues[clueIndex].a){
+  clueIndex++;
+  renderClue();
+ }else{
+  document.getElementById('clueFeedback').textContent='Not quite, JAANU! Try again ♡';
+ }
+}
+renderClue();
+
+// STARS
+
+const duas=[
+ 'Allah meri jaan ko hamesha apni hifazat mein rakhe aur har buri nazar se bachaye. Ameen. ❤️',
+ 'Allah tumhare saare ache dreams poore kare aur tumhein har kaam mein kamyabi de.',
+ 'Meri dua hai ke tumhari life mein kabhi khushiyon ki kami na ho aur tum hamesha haste raho.',
+ 'Allah tumhari har mushkil asaan kare aur tumhare dil ko hamesha sukoon de.',
+ 'Tum chahe kitne bhi gusse wale ho jao, Allah tumhein hamesha apne pyaron ke liye narm dil rakhe. 😂❤️',
+ 'I wish tum apni life mein woh sab achieve karo jo tumhara dil chahta hai. You deserve so much happiness, jaan.',
+ 'Allah tumhein sehat, lambi zindagi aur bohat sari barkat de. Ameen.',
+ 'Meri jaan, main chahti hoon tum kabhi apni worth par doubt na karo. You are so precious to me.',
+ 'Allah hum dono ko samajh, sabr, mohabbat aur hamesha ek dusre ka saath nibhane ki himmat de. Ameen.',
+ 'Meri sabse special dua: Allah tumhein hamesha khush rakhe aur hamare liye bohat khoobsurat future likhe. I LOVE YOU, DUDU. ❤️'
+];
+
+const starGrid=document.getElementById('starGrid');
+duas.forEach((dua,i)=>{
+ const btn=document.createElement('button');
+ btn.className='star';btn.textContent='✦';
+ btn.title='Wish '+(i+1);
+ btn.onclick=()=>document.getElementById('starMessage').textContent=dua;
+ starGrid.appendChild(btn);
+});
+
+// QUIZ
+
+const questions=[
+ {
+  q:'Humari baat sabse pehle kahan shuru hui thi?',
+  o:['Chiku ki shaadi','School mein','Instagram par'],
+  a:0
+ },
+ {
+  q:'Hum ek dusre ko mostly kis naam se bulate hain?',
+  o:['Baby','Jaan','Hero'],
+  a:1
+ },
+ {
+  q:'Hadi ka favourite food kya hai?',
+  o:['Pizza','Zinger Burger','Pasta'],
+  a:1
+ },
+ {
+  q:'Hadi ka favourite colour konsa hai?',
+  o:['Black','White','Blue'],
+  a:0
+ },
+ {
+  q:'Hadi ko sabse zyada kis cheez ka shok hai?',
+  o:['Bikes aur Cars','Gaming aur Cricket','Books aur Painting'],
+  a:0
+ },
+ {
+  q:'Hadi Ghadiya ko kya bolata hai?',
+  o:['Billi','Chipkali','Bandariya'],
+  a:1
+ },
+ {
+  q:'Bano Khala Hadi ke liye kya hain? 😂',
+  o:['Favourite teacher','Sabse bari Hitler','Best friend'],
+  a:1
+ },
+ {
+  q:'Hadi ki personality kaisi hai?',
+  o:['Funny, cute, emotional aur thora gusse wala','Bilkul serious aur boring','Bilkul chup rehne wala'],
+  a:0
+ },
+ {
+  q:'Jab BUBU ko bohat zyada pyaar aaye toh woh Hadi ko kya bulati hai?',
+  o:['Captain','Mera bacha, jaanu ya DUDU','Professor'],
+  a:1
+ },
+ {
+  q:'Is saal hamare saath kitne years complete hue?',
+  o:['1 year','2 years','3 years'],
+  a:2
+ }
+];
+
+let quizIndex=0,quizScore=0,answered=false;
+function startQuiz(){
+ quizIndex=0;quizScore=0;answered=false;
+ document.getElementById('quizResult').classList.add('hidden');
+ document.getElementById('restartQuiz').classList.add('hidden');
+ document.getElementById('nextQuestion').classList.add('hidden');
+ renderQuiz();
+}
+function renderQuiz(){
+ const q=questions[quizIndex];
+ document.getElementById('quizQuestion').innerHTML=`<p class="eyebrow">QUESTION ${quizIndex+1} OF ${questions.length}</p><h3 style="font-size:24px;margin:15px 0;color:var(--pink)">${q.q}</h3>`;
+ const opts=document.getElementById('quizOptions');
+ opts.innerHTML='';
+ q.o.forEach((option,i)=>{
+  const btn=document.createElement('button');
+  btn.className='quiz-option';btn.textContent=option;
+  btn.onclick=()=>answerQuiz(i);
+  opts.appendChild(btn);
+ });
+ document.getElementById('quizFeedback').textContent='';
+ answered=false;
+}
+function answerQuiz(i){
+ if(answered)return;
+ answered=true;
+ if(i===questions[quizIndex].a){
+  quizScore++;
+  document.getElementById('quizFeedback').textContent='Correct! You know your BUBU so well! ♡';
+ }else{
+  document.getElementById('quizFeedback').textContent='Oops! Not this one, my love. ♡';
+ }
+ document.getElementById('nextQuestion').classList.remove('hidden');
+}
+function nextQuiz(){
+ quizIndex++;
+ if(quizIndex<questions.length){
+  renderQuiz();
+ }else{
+  document.getElementById('quizQuestion').innerHTML='';
+  document.getElementById('quizOptions').innerHTML='';
+  document.getElementById('quizFeedback').textContent='';
+  document.getElementById('nextQuestion').classList.add('hidden');
+  const result=document.getElementById('quizResult');
+  result.classList.remove('hidden');
+  result.textContent=`OYYYY MERI JAAN! 😭❤️ Tumhara score ${quizScore}/${questions.length} hai! Score jo bhi ho, tum mere favourite person ho. Ab itna test dene ke baad ek tight hug aur bohat sari chumiyan toh banti hain! I LOVE YOU SOOO MUCHH, MY DUDU! ♡`;
+  document.getElementById('restartQuiz').classList.remove('hidden');
+ }
+}
+startQuiz();
+</script>
+</body>
+</html>
